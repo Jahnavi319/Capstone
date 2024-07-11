@@ -1,0 +1,49 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    /* Left padding */
+    padding-right: 20px;
+    /* Right padding */
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    /* Maximum width of the form */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    width: 100%;
+}
+
+.mt-5 {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-right: 10px;
+        /* Adjust padding on smaller screens */
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    form {
+        padding: 15px;
+        /* Adjust form padding for smaller screens */
+    }
+}

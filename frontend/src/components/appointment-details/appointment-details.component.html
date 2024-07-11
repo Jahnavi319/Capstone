@@ -1,0 +1,74 @@
+<div class="container">
+    <h2 class="mt-5">Patient Details</h2>
+    <form [formGroup]="AppointmentForm" (ngSubmit)="onSubmit()">
+        <!-- Full Name -->
+        <div class="form-group mt-3">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="form-control" id="fullName" formControlName="fullName"
+                placeholder="Enter full name" required>
+            <div class="invalid-feedback">Please enter your full name.</div>
+        </div>
+        <!-- Date of Birth -->
+        <div class="form-group mt-3">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" formControlName="dob" required>
+            <div class="invalid-feedback">Please enter your date of birth.</div>
+        </div>
+        <!-- Gender -->
+        <div class="form-group mt-3">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-select" formControlName="gender" required>
+                <option value="">Choose...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="invalid-feedback">Please select your gender.</div>
+        </div>
+        <!-- Contact Information -->
+        <div class="form-group mt-3">
+            <label for="contactInfo">Contact Information</label>
+            <input type="tel" class="form-control" id="contactInfo" formControlName="contactInfo"
+                placeholder="Enter contact number" required>
+            <div class="invalid-feedback">Please enter your contact information.</div>
+        </div>
+        <!-- Symptoms -->
+        <div class="form-group mt-3">
+            <label for="symptoms">Symptoms</label>
+            <textarea class="form-control" id="symptoms" rows="3" formControlName="symptoms"
+                placeholder="Describe your symptoms" required></textarea>
+            <div class="invalid-feedback">Please describe your symptoms.</div>
+        </div>
+        <!-- Nature of Visit -->
+        <div class="form-group mt-3">
+            <label for="natureOfVisit">Nature of Visit</label>
+            <select id="natureOfVisit" class="form-select" formControlName="natureOfVisit" required>
+                <option value="">Choose...</option>
+                <option value="consultation">Consultation</option>
+                <option value="follow-up">Follow-up</option>
+                <option value="emergency">Emergency</option>
+            </select>
+            <div class="invalid-feedback">Please select the nature of your visit.</div>
+        </div><br>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Form Submission</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Your form has been submitted successfully.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

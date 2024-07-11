@@ -1,0 +1,16 @@
+<div class="marquee">
+    <marquee behavior="scroll" direction="right" scrollamount="11">WELCOME TO ADMIN DASHBOARD</marquee>
+</div>
+
+<div class="container">
+    <div class="admin">
+        <h2 class="mt-5">Admin Dashboard</h2>
+        <div class="button-container">
+            <button class="btn btn-primary mb-3" routerLink="/doctor-list">Doctor Details</button><br>
+            <button class="btn btn-primary mb-3" routerLink="/new-patient">Add new-Patinet</button><br>
+            <button class="btn btn-primary mb-3" routerLink="/patient-details">Patient Details</button><br>
+            <button class="btn btn-primary mb-3" routerLink="/new-doctor">Add new-Doctor</button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
